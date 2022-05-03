@@ -37,4 +37,8 @@
 <p> docker push #ID#.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr:0.1.0
 
 ### Install
-helm install go-hello -n default --set image.repository=#ID#.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr
+<p> aws eks update-kubeconfig --name go-hello-eks --alias go-hello-eks
+<p> helm install go-hello -n default --set image.repository=#ID#.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr
+
+### Get external url
+<p> kubectl get svc go-hello -n default
