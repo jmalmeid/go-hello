@@ -23,3 +23,18 @@
  
 6) Provide an external http link
 
+## Solution
+
+### Create Infra
+cd terraform
+terraform init
+terraform plan
+terraform apply
+
+### Build
+cd ..
+docker build . --tag <ID>.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr:0.1.0
+docker push <ID>.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr:0.1.0
+
+### Install
+helm install go-hello -n default --set image.repository=<ID>.dkr.ecr.eu-central-1.amazonaws.com/go-hello-ecr
