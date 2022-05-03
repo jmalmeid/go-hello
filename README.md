@@ -42,3 +42,8 @@
 
 ### Get external url
 <p> kubectl get svc go-hello -n default
+<p> Result:
+<p> NAME       TYPE           CLUSTER-IP             EXTERNAL-IP                                                                  PORT(S)         AGE
+<p> go-hello   LoadBalancer   fd34:b152:42ab::b794   ac9969e69e90f4964a201957b1abee21-2144297088.eu-central-1.elb.amazonaws.com   80:32357/TCP    13m
+
+<p> Put in Browser http://ac9969e69e90f4964a201957b1abee21-2144297088.eu-central-1.elb.amazonaws.com
